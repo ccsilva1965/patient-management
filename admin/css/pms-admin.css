@@ -1,0 +1,325 @@
+/* Estilos para a área administrativa do Patient Management System */
+
+.pms-admin-page {
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+.pms-admin-header {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.pms-admin-header h1 {
+    margin: 0;
+    color: #23282d;
+    font-size: 24px;
+}
+
+.pms-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.pms-stat-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.pms-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.pms-stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0073aa;
+    margin-bottom: 10px;
+}
+
+.pms-stat-label {
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pms-quick-actions {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.pms-quick-actions h2 {
+    margin-top: 0;
+    color: #23282d;
+    font-size: 18px;
+}
+
+.pms-action-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.pms-action-btn {
+    background: #0073aa;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pms-action-btn:hover {
+    background: #005a87;
+    color: #fff;
+}
+
+.pms-action-btn.secondary {
+    background: #666;
+}
+
+.pms-action-btn.secondary:hover {
+    background: #444;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .pms-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pms-action-buttons {
+        flex-direction: column;
+    }
+    
+    .pms-action-btn {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+
+/* Estilos responsivos adicionais */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .pms-admin-page {
+        padding: 15px;
+    }
+    
+    .pms-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .pms-admin-header {
+        padding: 15px;
+    }
+    
+    .pms-admin-header h1 {
+        font-size: 20px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .pms-admin-page {
+        padding: 10px;
+    }
+    
+    .pms-admin-header {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .pms-admin-header h1 {
+        font-size: 18px;
+    }
+    
+    .pms-stat-card {
+        padding: 15px;
+    }
+    
+    .pms-stat-number {
+        font-size: 28px;
+    }
+    
+    .pms-stat-label {
+        font-size: 12px;
+    }
+    
+    .pms-quick-actions,
+    .pms-recent-activity {
+        padding: 15px;
+    }
+    
+    .pms-action-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Formulários responsivos */
+    .form-table th,
+    .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .form-table th {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .form-table input,
+    .form-table select,
+    .form-table textarea {
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* Tabelas responsivas */
+    .wp-list-table {
+        font-size: 12px;
+    }
+    
+    .wp-list-table th,
+    .wp-list-table td {
+        padding: 8px 4px;
+    }
+    
+    /* Ocultar colunas menos importantes em telas pequenas */
+    .wp-list-table .column-date,
+    .wp-list-table .column-patient_dob {
+        display: none;
+    }
+}
+
+/* Melhorias de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .pms-stat-card,
+    .pms-action-btn {
+        transition: none;
+    }
+    
+    .pms-stat-card:hover {
+        transform: none;
+    }
+}
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+    .pms-admin-page {
+        background: #1e1e1e;
+        color: #ffffff;
+    }
+    
+    .pms-admin-header,
+    .pms-stat-card,
+    .pms-quick-actions,
+    .pms-recent-activity {
+        background: #2d2d2d;
+        color: #ffffff;
+    }
+    
+    .pms-admin-header h1,
+    .pms-quick-actions h2,
+    .pms-recent-activity h2 {
+        color: #ffffff;
+    }
+    
+    .pms-stat-label,
+    .pms-activity-text,
+    .pms-activity-time {
+        color: #cccccc;
+    }
+}
+
+/* Impressão */
+@media print {
+    .pms-action-buttons,
+    .pms-quick-actions {
+        display: none;
+    }
+    
+    .pms-admin-page {
+        background: white;
+        color: black;
+    }
+    
+    .pms-stat-card {
+        border: 1px solid #000;
+        box-shadow: none;
+    }
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .pms-action-btn {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+    
+    .pms-stat-card {
+        padding: 20px;
+    }
+    
+    /* Aumentar área de toque para links */
+    .pms-activity-item a {
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+/* Orientação landscape em dispositivos móveis */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .pms-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    
+    .pms-stat-card {
+        padding: 10px;
+    }
+    
+    .pms-stat-number {
+        font-size: 24px;
+    }
+    
+    .pms-stat-label {
+        font-size: 10px;
+    }
+}
+
+/* Melhorias para telas de alta densidade */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .pms-admin-header,
+    .pms-stat-card,
+    .pms-quick-actions,
+    .pms-recent-activity {
+        border: 0.5px solid rgba(0,0,0,0.1);
+    }
+}
+
