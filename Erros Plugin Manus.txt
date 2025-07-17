@@ -1,0 +1,28 @@
+[16-Jul-2025 15:41:03 UTC] PHP Parse error:  Unclosed '{' on line 22 in /home/centelha/pacientes.drcentelhas.com.br/wp-content/plugins/patient-management-plugin/includes/class-pms-activator.php on line 94
+[16-Jul-2025 15:44:37 UTC] PHP Parse error:  Unclosed '{' on line 22 in /home/centelha/pacientes.drcentelhas.com.br/wp-content/plugins/patient-management-plugin/includes/class-pms-medical-records-manager.php on line 606
+[16-Jul-2025 17:14:58 UTC] PHP Parse error:  Unclosed '{' on line 22 in /home/centelha/pacientes.drcentelhas.com.br/wp-content/plugins/patient-management-plugin/includes/class-pms-medical-records-manager.php on line 606
+[16-Jul-2025 17:22:07 UTC] PHP Parse error:  Unclosed '{' on line 22 in /home/centelha/pacientes.drcentelhas.com.br/wp-content/plugins/patient-management-plugin/includes/class-pms-activator.php on line 94
+[16-Jul-2025 18:34:28 UTC] PHP Parse error:  Unclosed '{' on line 22 in /home/centelha/pacientes.drcentelhas.com.br/wp-content/plugins/patient-management-plugin/includes/class-pms-activator.php on line 94
+[16-Jul-2025 18:38:47 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/centelha/pacientes.drcentelhas.com.br/wp-content/plugins/patient-management-plugin/includes/class-pms-medical-records-manager.php on line 305
+[16-Jul-2025 18:45:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function PHPMailer\PHPMailer\mail() in /home/centelha/pacientes.drcentelhas.com.br/wp-includes/PHPMailer/PHPMailer.php:880
+
+
+Stack trace:
+#0 /home/centelha/pacientes.drcentelhas.com.br/wp-includes/PHPMailer/PHPMailer.php(1968): PHPMailer\PHPMailer\PHPMailer->mailPassthru()
+#1 /home/centelha/pacientes.drcentelhas.com.br/wp-includes/PHPMailer/PHPMailer.php(1691): PHPMailer\PHPMailer\PHPMailer->mailSend()
+#2 /home/centelha/pacientes.drcentelhas.com.br/wp-includes/PHPMailer/PHPMailer.php(1523): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/centelha/pacientes.drcentelhas.com.br/wp-includes/pluggable.php(547): PHPMailer\PHPMailer\PHPMailer->send()
+#4 /home/centelha/pacientes.drcentelhas.com.br/wp-includes/pluggable.php(2242): wp_mail()
+#5 /home/centelha/pacientes.drcentelhas.com.br/wp-includes/user.php(3588): wp_new_user_notification()
+#6 /home/centelha/pacientes.drcentelhas.com.br/wp-includes/class-wp-hook.php(324): wp_send_new_user_notifications()
+#7 /home/centelha/pacientes.drcentelhas.com.br/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#8 /home/centelha/pacientes.drcentelhas.com.br/wp-includes/plugin.php(517): WP_Hook->do_action()
+#9 /home/centelha/pacientes.drcentelhas.com.br/wp-admin/includes/user.php(247): do_action()
+#10 /home/centelha/pacientes.drcentelhas.com.br/wp-admin/user-new.php(201): edit_user()
+#11 {main}
+
+
+  thrown in /home/centelha/pacientes.drcentelhas.com.br/wp-includes/PHPMailer/PHPMailer.php on line 880
+[17-Jul-2025 03:49:08 UTC] Automatic updates starting...
+[17-Jul-2025 03:49:14 UTC] Automatic updates complete.
+[17-Jul-2025 20:45:55 UTC] PHP Parse error:  Unclosed '{' on line 22 in /home/centelha/pacientes.drcentelhas.com.br/wp-content/plugins/patient-management-plugin/includes/class-pms-activator.php on line 94
